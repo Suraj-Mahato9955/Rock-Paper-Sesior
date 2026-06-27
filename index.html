@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎮 Rock Paper Scissors</h1>
+
+    <!-- Player Section -->
+    <div class="player-section">
+
+        <label for="playerName">Enter Your Name</label>
+
+        <input
+            type="text"
+            id="playerName"
+            placeholder="Enter your name">
+
+        <button id="startBtn">
+            ▶ Start Game
+        </button>
+
+    </div>
+
+    <hr>
+
+    <!-- Score Board -->
+
+    <div class="scoreboard">
+
+        <div class="score-card">
+            <h3>👤 Player</h3>
+            <h2 id="playerScore">0</h2>
+        </div>
+
+        <div class="score-card">
+            <h3>🎯 Round</h3>
+            <h2>
+                <span id="round">0</span>/5
+            </h2>
+        </div>
+
+        <div class="score-card">
+            <h3>🤖 Computer</h3>
+            <h2 id="computerScore">0</h2>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- Game Buttons -->
+
+    <div class="choices">
+
+        <button id="rockBtn" class="choice-btn">
+            <span class="choice-icon">✊</span>
+            <span>Rock</span>
+        </button>
+
+        <button id="paperBtn" class="choice-btn">
+            <span class="choice-icon">✋</span>
+            <span>Paper</span>
+        </button>
+
+        <button id="scissorsBtn" class="choice-btn">
+            <span class="choice-icon">✌️</span>
+            <span>Scissors</span>
+        </button>
+
+    </div>
+
+    <hr>
+
+    <!-- Result -->
+
+    <div class="result">
+
+    <div class="result-card">
+
+        <div class="player-box">
+            <h3>👤 YOU</h3>
+            <div id="playerChoiceIcon" class="choice-display">❔</div>
+        </div>
+
+        <div class="vs-box">
+            <h2>VS</h2>
+        </div>
+
+        <div class="computer-box">
+            <h3>🤖 COMPUTER</h3>
+            <div id="computerChoiceIcon" class="choice-display">❔</div>
+        </div>
+
+    </div>
+
+    <h2 id="resultText">
+        Click Start Game
+    </h2>
+
+    </div>
+
+    <hr>
+
+    <!-- History -->
+
+    <div class="history">
+
+        <h2>📜 Game History</h2>
+
+        <ul id="historyList">
+
+        </ul>
+
+    </div>
+
+    <hr>
+
+    <!-- Footer Buttons -->
+
+    <div class="footer-buttons">
+
+        <button id="resetBtn">
+            🔄 Reset Game
+        </button>
+
+        <button id="themeBtn">
+            🌙 Dark Mode
+        </button>
+
+    </div>
+
+</div>
+<!-- Winner Popup -->
+
+<div id="winnerModal" class="modal">
+
+    <div class="modal-content">
+
+        <h1 id="winnerTitle">
+            🏆 Winner
+        </h1>
+
+        <p id="winnerMessage">
+            Congratulations!
+        </p>
+
+        <button id="playAgainBtn">
+            🎮 Play Again
+        </button>
+
+    </div>
+
+</div>
+<script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</body>
+</html>
